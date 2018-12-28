@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = 'utf8'>
+    <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="../../semantic/out/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../semantic/out/semantic.min.css">
+    <link rel = 'stylesheet' type = 'text/css' media = 'screen' href = '../css/edit.css'>
+</head>
+<body>
+    <!-- header -->
+    <section id = 'header' class = 'ui top fixed menu header'>
+        <h1 class = 'title'>
+            management
+        </h1>
+        <div class = 'right menu'>
+            <button id = 'logout' class = 'ui blue right floated button logout'>logout</button>
+            <button id = 'add' class = ' ui blue right floated button add'>Add</button>
+        </div>
+    </section>
+    <!-- content -->
+    <!-- page management -->
+    <div id = 'page-management'>
+        <div class = 'ui container node pusher'>
+            <div class = 'ui center aligned grid'>
+                <h3 class = 'sixteen wide column project'>Project</h3>
+                <p class = 'four wide column year'>1998</p>
+                <p class = 'four wide column school'>school</p>
+                <p class = 'four wide column type'>type</p>
+                <div class = ' right aligned four wide column'>
+                    <button class = 'ui red button edit'>edit</button>
+                    <button class = 'ui red button delete'>delete</button>
+                </div>
+            </div>
+        </div>
+        <div class = 'ui container node'>
+                <div class = 'ui center aligned grid'>
+                    <h3 class = 'sixteen wide column project'>Project</h3>
+                    <p class = 'four wide column year'>1998</p>
+                    <p class = 'four wide column school'>school</p>
+                    <p class = 'four wide column type'>type</p>
+                    <div class = ' right aligned four wide column'>
+                        <button class = 'ui red button edit'>edit</button>
+                        <button class = 'ui red button delete'>delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- page edit -->
+    <div class = 'page-edition'>
+        <div class = 'ui container node pusher'>
+            <form class = 'ui center aligned grid'>
+                <div class = 'eight wide column'>
+                    <select name = 'dimension' class = 'ui dropdown'>
+                        <option value = '教學'>教學</option>
+                        <option value = '教學'>教學教學教學教學教學</option>
+                    </select>
+                </div>
+                <div class = 'eight wide column'>
+                    <select name = 'dimension' class = 'ui dropdown '>
+                        <option value = '教學'>教學</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src = '../js/edit.js'></script>

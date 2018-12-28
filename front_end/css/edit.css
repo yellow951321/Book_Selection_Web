@@ -1,0 +1,19 @@
+select {
+    height: 1rem;
+}
+.title {
+    margin-left: 5%;
+}
+
+.node {
+    margin-top: 2rem;
+    padding: 4rem;
+    border: 0.3rem solid black;
+    border-radius: 1rem;
+}
+.pusher {
+    margin-top: 8rem;
+}
+.project .type .year {
+    text-align: center;
+}
