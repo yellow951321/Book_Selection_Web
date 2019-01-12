@@ -2,25 +2,55 @@
 <head>
     <meta charset = 'utf8'>
     <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <link rel="stylesheet" type="text/css" href="../../semantic/out/semantic.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel = 'stylesheet' type = 'text/css' media = 'screen' href = '../css/edit.css'>
     <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
     <script src="../../semantic/out/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../semantic/out/semantic.min.css">
-    <link rel = 'stylesheet' type = 'text/css' media = 'screen' href = '../css/edit.css'>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <!-- header -->
     <section id = 'header' class = 'ui top fixed menu header'>
-        <h1 class = 'title'>
+        <h1 id = 'title' class = 'title'>
             management
         </h1>
         <div class = 'right menu'>
+            <button id = 'add' class = ' ui blue right floated button btn btn-info btn-lg add' data-toggle="modal" data-target="#myModal">Add</button>
+            <button id = 'save' class = 'ui blue right floated button save' >save</button>
             <button id = 'logout' class = 'ui blue right floated button logout'>logout</button>
-            <button id = 'add' class = ' ui blue right floated button add'>Add</button>
         </div>
     </section>
+    <!-- popups -->
+  <div class="modal fade" id="myModal" role="dialog">
+        <form id="addProjectForm" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4>Add new project</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="project"><b>Project Name</b></label>
+                    <input type="text" placeholder="Enter Project Name" name="project" required>
+
+                    <label for="year"><b>Year</b></label>
+                    <input type="number" min="1900" max="2099" step="1" value="2019" name = 'year' required/>
+
+                    <label for="school"><b>school</b></label>
+                    <input type="text" placeholder="Enter school Name" name="school" required>
+
+                    <label for="type"><b>school type</b></label>
+                    <input type="text" placeholder="Enter school type" name="type" required>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" id="addProject"value="Add project" />
+                </div>
+            </div>
+        </form>
+    </div>
     <!-- content -->
     <!-- page management -->
     <div id = 'page-management'>
@@ -52,22 +82,33 @@
     </div>
 
     <!-- page edit -->
-    <div class = 'page-edition'>
+    <div id = 'page-edit'>
         <div class = 'ui container node pusher'>
             <form class = 'ui center aligned grid'>
                 <div class = 'eight wide column'>
+                    <p class = 'text'>構面</p>
                     <select name = 'dimension' class = 'ui dropdown'>
                         <option value = '教學'>教學</option>
                         <option value = '教學'>教學教學教學教學教學</option>
                     </select>
-                </div>
-                <div class = 'eight wide column'>
+                    <p class = 'text'>項目</p>
                     <select name = 'dimension' class = 'ui dropdown '>
                         <option value = '教學'>教學</option>
                     </select>
+                    <p class = 'text'>詳信資料</p>
+                    <select name = 'dimension' class = 'ui dropdown '>
+                            <option value = '教學'>教學</option>
+                    </select>
+                </div>
+                <div class = 'eight wide column'>
+                    <div  class = 'ui center aligned grid'>
+                        <textarea id = 'content' class = 'sixteen wide' name = 'content' rows = '11' cols = '50'></textarea>
+                    </div>
                 </div>
             </form>
         </div>
+
+        <button id = 'newContentButton' class = 'ui blue button'>新增資料</button>
     </div>
 </body>
 <script src = '../js/edit.js'></script>

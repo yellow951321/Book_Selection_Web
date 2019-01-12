@@ -9,6 +9,7 @@ select {
     margin-top: 2rem;
     padding: 4rem;
     border: 0.3rem solid black;
+    background-color: rgba(75, 109, 131, 0.1);
     border-radius: 1rem;
 }
 .pusher {
@@ -16,4 +17,40 @@ select {
 }
 .project .type .year {
     text-align: center;
+}
+
+.text {
+    margin-top: 1rem;
+}
+
+#content {
+    font-size: 1.5rem;
+}
+
+#newContentButton {
+    width: 10%;
+    height: 3.5rem;
+    margin: 5rem 45% 0;
+    font-size: 1.5rem;
+}
+
+/* popup form */
+
+.modal-body input{
+    width: 50%;
+    height: 3rem;
+    padding: 0.5rem;
+    margin: 0.5rem 25% 0 25%;
+    border: none;
+    background: #f1f1f1;
+}
+
+.modal-footer input[type="submit"]{
+    height: 3rem;
+    padding: 0.5rem;
+    border: none;
+    background: #f1f1f1;
+    width: 40%;
+    margin: 0.5rem 30% 0.5rem ;
+    margin-top: 2rem;
 }
